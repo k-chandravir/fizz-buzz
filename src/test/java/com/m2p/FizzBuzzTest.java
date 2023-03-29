@@ -36,10 +36,22 @@ public class FizzBuzzTest {
     @Nested
     class NumberItself{
         @Test
-        void toReturnFourWhenNeitherDividedByThreeNorFive(){
+        void toReturnFourWhenTheNumberIsFour(){
             String expected = "4";
 
             String actual = number.getFizzBuzz(4);
+
+            assertEquals(expected, actual);
+        }
+    }
+
+    @Nested
+    class FizzBuzzNumber{
+        @Test
+        void toReturnFizzBuzzWhenTheNumberIsFifteen(){
+            String expected = "FizzBuzz";
+
+            String actual = number.getFizzBuzz(15);
 
             assertEquals(expected, actual);
         }
