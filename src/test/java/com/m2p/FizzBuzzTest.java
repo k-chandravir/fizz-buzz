@@ -15,7 +15,31 @@ public class FizzBuzzTest {
         void toReturnFizzWhenTheNumberIsTwentyOne(){
             String expected = "Fizz";
 
-            String actual = number.getFizzBuzz(96);
+            String actual = number.getFizzBuzz(21);
+
+            assertEquals(expected, actual);
+        }
+    }
+
+    @Nested
+    class Buzz{
+        @Test
+        void toReturnBuzzWhenTheNumberIsTwenty(){
+            String expected = "Buzz";
+
+            String actual = number.getFizzBuzz(20);
+
+            assertEquals(expected, actual);
+        }
+    }
+
+    @Nested
+    class NumberItself{
+        @Test
+        void toReturnFourWhenNeitherDividedByThreeNorFive(){
+            String expected = "4";
+
+            String actual = number.getFizzBuzz(4);
 
             assertEquals(expected, actual);
         }
